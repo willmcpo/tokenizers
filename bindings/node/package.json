@@ -1,6 +1,6 @@
 {
   "name": "tokenizers",
-  "version": "0.15.3-dev0",
+  "version": "0.15.4-custom",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/huggingface/tokenizers.git"
@@ -16,24 +16,7 @@
     "index.d.ts",
     "index.js"
   ],
-  "napi": {
-    "name": "tokenizers",
-    "triples": {
-      "defaults": true,
-      "additional": [
-        "x86_64-unknown-linux-musl",
-        "aarch64-unknown-linux-gnu",
-        "i686-pc-windows-msvc",
-        "armv7-unknown-linux-gnueabihf",
-        "aarch64-apple-darwin",
-        "aarch64-linux-android",
-        "x86_64-unknown-freebsd",
-        "aarch64-unknown-linux-musl",
-        "aarch64-pc-windows-msvc",
-        "armv7-linux-androideabi"
-      ]
-    }
-  },
+  
   "engines": {
     "node": ">= 10"
   },
@@ -42,18 +25,18 @@
     "access": "public"
   },
   "scripts": {
-    "artifacts": "napi artifacts",
+    
     "bench": "node -r @swc-node/register benchmark/bench.ts",
-    "build": "napi build --platform --release --pipe \"prettier -w\"",
-    "build:debug": "napi build --platform --pipe \"prettier -w\"",
+    
+    
     "format": "run-p format:prettier format:rs format:toml",
     "format:prettier": "prettier . -w",
     "format:toml": "taplo format",
     "format:rs": "cargo fmt",
     "lint": "eslint . -c ./.eslintrc.yml",
-    "prepublishOnly": "napi prepublish -t npm",
+    
     "test": "jest",
-    "version": "napi version"
+    
   },
   "devDependencies": {
     "@napi-rs/cli": "^2.14.6",
