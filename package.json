@@ -16,7 +16,7 @@
     "index.d.ts",
     "index.js"
   ],
-  
+
   "engines": {
     "node": ">= 10"
   },
@@ -25,18 +25,18 @@
     "access": "public"
   },
   "scripts": {
-    
+
     "bench": "node -r @swc-node/register benchmark/bench.ts",
-    
-    
+
+
     "format": "run-p format:prettier format:rs format:toml",
     "format:prettier": "prettier . -w",
     "format:toml": "taplo format",
     "format:rs": "cargo fmt",
     "lint": "eslint . -c ./.eslintrc.yml",
-    
-    "test": "jest",
-    
+
+    "test": "jest"
+
   },
   "devDependencies": {
     "@napi-rs/cli": "^2.14.6",
